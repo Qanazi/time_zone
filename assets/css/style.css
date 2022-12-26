@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Roboto:wght@700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+/*  ----------  nav-bar style  ----------  */
+.nav-bar{
+    background-color: #fff;
+    display: flex;
+    
+    justify-content: space-between;
+    padding: 2%  7%;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 1px 2px #d7d7d7;
+    
+}
+.logo{
+    width: 20%;
+}
+
+
+
+
+.nav-list{
+    display: flex;
+    list-style: none;
+    width: 60%;
+    justify-content: center;
+    
+}
+.list-item a{
+    transition: color 0.2s;
+}
+.nav-list .list-item {
+    
+    margin-right: 50px;
+    position: relative;
+}
+
+.dropdown{
+    list-style: none;
+    justify-content: center;
+    position: absolute;
+    background-color: #fff;
+    top: 55px;
+    width: 150px;
+    padding: 25px  16px 0px;
+    border-top: 2px solid #ff2020;
+    border-radius: 10px;
+    top: 63px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s;
+}
+.dropdown::before{
+    content: '';
+    position: absolute;
+    border-bottom:10px solid #ff2020;
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    top: -21px;
+    
+}
+.nav-list .list-item:hover .dropdown{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.dropdown .dropdown-item{
+    margin-bottom: 15px;
+}
+
+.nav-list .list-item a:hover{
+    color: #ff2020;
+}
+
+
+.list-item:nth-child(4)::after{
+    content: "HOT";
+    position: absolute;
+    top: -18px;
+    right: -26px;
+    background-color: #ff2020;
+    color: #fff;
+    border-radius: 7px;
+    padding: 2px  6px;
+    font-size: 10px;
+}
+
+.icons{
+    display: flex;
+    width: 20%;
+    justify-content: flex-end;
+    
+}
+
+.icons i{
+    margin-left: 25px;
+}
+.icons i:hover{
+    color: #ff2020;
+}
+
+
+.menu-icon{
+    width: 30%;
+    display: none;
+}
+
+#menu:checked + .nav-list {
+    opacity: 1;
+    visibility: visible;
+    transform: opacity 1s;
+ }
+
+
+.container{
+    margin: 0% 15%;
+    
+    overflow: hidden;
+}
+.row{
+    display: flex;
+    
+    align-items: center;
+    
+    
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+
+
+/*  ----------  header style  ----------  */
+header{
+    height: 100vh;
+    background-color: #f0f0f2;
+    overflow: hidden;
+    
+}
+.header-text{
+    width: 70%;
+    animation-name: contentLeft ;
+    animation-duration: 2s;
+}
+.header-text h1{
+    font-size: 96px;
+    color: RGB(11, 28, 57);
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+
+}
+.header-text p{
+    font-size: 17px;
+    width: 70%;
+    margin: 50px 0px;
+    
+        
+
+}
+.btn{
+    background-color: #4a4a4b;
+    font-family: "Josefin Sans",sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 0.03em;
+    padding: 15px 28px;
+    position: relative;
+    
+    border: none;
+    z-index: 1;
+    
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #ff2020;
+    z-index: -1;
+    transition: width 0.5s;
+    
+    
+} 
+.btn:hover::before {
+    width: 100%;
+}
+.header-img{
+    width: 30%;
+    
+}
+.header-img img{
+    height: 100%;
+    animation-name: imageAnimation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+}
+
+@keyframes contentLeft {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+@keyframes imageAnimation {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.05);
+    }
+}
+
+
+/* -----------new arrival section ------------ */
+.arrivals .container h2{
+    font-size: 48px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+}
+.arrivals .container .row{
+    justify-content: flex-start;
+    gap: 4%;
+
+    
+}
+.product{
+    text-align: center;
+    font-size: 22px;
+    color: #444;
+}
+.product h3{
+    padding: 3%  0%;
+}
+.product p{
+    color: #ff2020;
+    font-size: 18px;
+    font-family: "Josefin Sans",sans-serif ;
+}
+.productImage{
+    overflow: hidden;
+}
+
+.productImage img{
+    width: 100%;
+    transition: transform 1s;
+}
+.product:hover .productImage img{
+    transform: scale(1.1);
+    
+    
+    
+}
+/* ---------- galary style ---------- */
+.galary{
+    
+    overflow: hidden;
+}
+.image-galary{
+    display: flex;
+    gap:20px;
+    width: 100%;
+    height: 100%;
+    margin-top: 7%;
+    
+    
+    
+}
+.single-image{
+    overflow: hidden;
+    position: relative;
+}
+.image-galary .single-image img{
+    width: 100%;
+    transform: scale(1.1);
+    transition: transform 0.5s;
+    
+}
+.double-image{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    
+}
+.double-image .single-image img{
+    height: 99%;
+}
+.double-image .single-image{
+    height: 50%;
+}
+.single-image:hover .shadow{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background-color: #000;
+    opacity: 0.5;
+} 
+.single-image:hover img{
+    transform: scale(1);
+}
+
+/* popular item */
+.popular{
+    margin: 7% 0%;
+}
+.popular .container .title{
+    margin: auto;
+    text-align: center;
+}
+.popular .container .title h2{
+    font-size: 48px;
+}
+.popular .container .title p{
+    font-size: 16px;
+    line-height: 30px;
+    color: RGB(119, 119, 119);
+    width: 50%;
+    margin: auto;   
+}
+
+.popular .container .row{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 5%;
+}
+.popular .container .row .popular-item{
+    width: 30%;
+    text-align: center;
+    position: relative;
+   
+}
+ .img-container{
+    border-bottom: 2px solid #ff2020;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+} 
+.popular .container .row .popular-item img{
+    width: 100%;
+}
+.love-icon{
+    position: absolute;
+    top: 5px;
+    right: 25px;
+    font-size: 32px;
+    font-weight: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s;
+}
+
+.popular .container .row .popular-item .addcart{
+    position: absolute;
+    width: 100%;
+    background-color: #ff2020;
+    color: #fff;
+    padding: 6% 0%;
+    bottom: -65px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s,bottom 1s;
+}
+.popular .container .row .popular-item .addcart a{
+    color: #fff;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.popular .container .row .popular-item:hover .love-icon{
+    opacity: 1;
+    visibility: visible;
+}
+.popular .container .row .popular-item:hover .addcart{
+    opacity: 1;
+    visibility: visible;
+    bottom: 0px;
+}
+.popular .container .btn{
+    margin: auto;
+    display: block;
+    
+}
+.video{
+    height: 70%;
+    width: 100%;
+    position: relative;
+    margin: 7% 0%;
+    
+   
+    
+}
+.video img{
+    width: 100%;
+    height: 100%;
+    
+}
+.video .nextVideo{
+    position: absolute;
+    bottom: 4px;
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #ff2020;
+    padding: 3%;
+}
+.video .nextVideo p{
+    color: #fff;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+}
+.video .nextVideo i{
+    color: #fff;
+    font-size: 20px;
+}
+.video .playIcon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    
+}
+.video .playIcon i{
+    color: #fff;
+    font-size: 50px;
+    display: block;
+    margin: auto;
+}
+
+/* choise */
+.choice .container .row{
+    justify-content: space-between;
+    margin: 3% 0%;
+}
+
+.choice .container .row .content {
+    width: 45%;
+    
+
+}
+.choice .container .row .img-choice{
+    width: 45%;
+}
+.choice .container .row .img-choice img{
+    width: 100%;
+}
+
+.choice .container .row .content h2{
+    font-size: 56px;
+}
+.choice .container .row .content p{
+    padding: 40px 0px;
+    width: 78%;
+    color: RGB(119, 119, 119);
+    font-size: 17px;
+
+}
+/* advantages */
+.advantage .container .row{
+    background-color: #ff2020;
+    padding: 5%;
+    justify-content: space-between;
+    margin: 7% 0%;
+}
+
+.advantage .container .row  .point .point-icon i{
+    font-size: 40px;
+    color: #fff;
+
+}
+.advantage .container .row .point h3{
+    font-size: 20px;
+    color: #fff;
+    padding: 20px 0px;
+    
+}
+.advantage .container .row .point p{
+    font-size: 16px;
+    color: RGB(211, 209, 209);
+    width: 80%;
+}
+/* footer */
+.foot .container .row .description {
+    width: 30%;
+    
+}
+.foot .container .row .description p{
+    color: RGB(134, 140, 152);
+    padding-top: 20px;
+    width: 80%;
+}
+.foot .container .row .foot-item{
+    width: 23%;
+}
+
+.foot .container .row .foot-item ul {
+    list-style: none;
+    
+   
+}
+.foot .container .row .foot-item h3{
+    margin-bottom: 5%;
+}
+.foot .container .row .foot-item ul li {
+    padding : 2% 0%;
+    transition: translate 0.5s;
+    
+}
+.foot .container .row .foot-item ul li a{
+    
+    color: RGB(134, 140, 152);
+    
+}
+
+.foot .container .row .foot-item ul li a:hover {
+    color: #ff2020;
+    /* transform: translateX(10px ,10px); */
+    /* translate: 10px 10px; */
+}
+.foot .container .row .foot-item ul li:hover{
+    translate: 4px 4px;
+}
+
+

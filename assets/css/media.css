@@ -1,0 +1,221 @@
+@media screen and (max-width:1605px) {
+    .nav-bar{
+        padding: 2%;
+    }
+
+    .header-img img{
+        width: 100%;
+    }
+    
+}
+
+@media screen and (max-width:992px) {
+    
+    
+    #menu{
+        display: block;
+    }
+    .nav-bar{
+        position: relative;
+    }
+    .nav-list{
+        display: block;
+        position: absolute;
+        flex-direction: column;
+        background-color: rgb(69, 69, 69);
+        width: 100%;
+        top: 100%;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .list-item{
+        padding: 2%;
+    }
+    .nav-link{
+        color: #fff;
+    }
+
+    .dropdown{
+        display: none;
+    }
+    .list-item:nth-child(4)::after{
+        display: none;
+    }
+
+   
+
+
+    .menu-icon{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .logo{
+        width: 35%;
+    }
+    .icons{
+        width: 35%;
+        justify-content: center;
+    }
+    .header-img {
+        
+        height: 100%;
+    }
+    .header-text{
+        
+        padding-top: 5%;
+    }
+    .header-text h1{
+        font-size:60px;
+       }
+
+       
+    
+}
+@media screen and (max-width:768px) {
+    .header-text h1{
+     font-size:50px;
+    }
+    .header-img img{
+        width: 100%;
+    }
+   .container{
+    margin: 0% 5%;
+   }
+   .header-text{
+    
+    padding-top: 5%;
+}
+/* arrivals */
+.arrivals .container .row{
+    flex-wrap: wrap;
+}
+.arrivals .container .row .product{
+    width: 45%;
+}
+
+.popular .container .title p{
+    width: 100%;
+}
+.popular .container .row .popular-item{
+    width: 45%;
+    margin-top: 15px;
+}
+/* choice */
+.choice .container .row .content h2{
+    font-size: 32px;
+}
+
+/* advantages */
+.advantage .container .row .point{
+    width: 45%;
+    margin-bottom: 4%;
+}
+.advantage .container .row{
+    flex-wrap: wrap;
+}
+
+/* footer */
+.foot .container .row{
+    flex-wrap: wrap;
+}
+.foot .container .row .description {
+    width: 45%;
+    margin-top: 2%;
+    
+}
+.foot .container .row .foot-item{
+    width: 45%;
+    margin-top: 2%;
+}
+
+#menu:checked + .nav-list{
+    opacity: 1;
+    visibility: visible;
+    transform: opacity 1s;
+}
+
+ }
+
+
+@media screen and (max-width:575px) {
+    .logo-img{
+        width: 80%;
+    }
+
+
+    .header-img{
+        display: none;
+    }
+
+    .header-text{
+        width: 100%;
+        padding-top: 5%;
+    }
+    .header-text h1{
+        font-size: 45px;
+
+    }
+    
+    /* arrivals */
+    .arrivals .container .row{
+        flex-direction: column;
+        
+    }
+    .arrivals .container .row .product{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+
+
+    /* galary */
+    .galary .image-galary{
+        flex-direction: column;
+    }
+
+    .popular .container .title p{
+        width: 100%;
+    }
+    .popular .container .row .popular-item{
+        width: 100%;
+        margin-top: 15px;
+    }
+    /* choice */
+    .choice .container .row{
+        flex-direction: column;
+    }
+    .choice .container .row .content{
+        width: 100%;
+        margin-bottom: 5%;
+    }
+    .choice .container .row .img-choice{
+        width: 100%;
+        margin-bottom: 5%;
+    }
+
+    /* advantages */
+.advantage .container .row .point{
+    width: 100%;
+    margin-bottom: 4%;
+}
+.advantage .container .row{
+    flex-wrap: wrap;
+}
+
+/* footer */
+.foot .container .row{
+    flex-wrap: wrap;
+}
+.foot .container .row .description {
+    width: 100%;
+    margin-top: 2%;
+}
+.foot .container .row .foot-item{
+    width: 100%;
+    margin-top: 2%;
+}
+
+
+}
